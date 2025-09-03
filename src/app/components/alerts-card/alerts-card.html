@@ -1,0 +1,25 @@
+<div class="overflow-hidden rounded-lg bg-white shadow-sm h-full">
+  <div class="px-4 py-5 sm:px-6 flex justify-between items-center gap-2">
+    <div class="mr-auto">
+      <h3 class="text-xl font-semibold text-gray-900">Recent Alerts</h3>
+      <p class="mt-1 text-gray-500">Latest system notifications</p>
+    </div>
+    <button
+      type="button"
+      class="rounded-md bg-white px-3.5 py-2.5 font-semibold text-gray-900 shadow-xs inset-ring inset-ring-gray-300 hover:bg-gray-50"
+    >
+      View All
+    </button>
+  </div>
+  <div class="px-6">
+    <!-- Content goes here -->
+    @for (alert of alerts; track alert.id) {
+    <app-alert
+      [title]="alert.title"
+      [message]="alert.message"
+      [date]="alert.timestamp"
+      [type]="alert.type"
+    />
+    }
+  </div>
+</div>

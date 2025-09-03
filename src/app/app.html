@@ -1,7 +1,8 @@
 <main class="py-10">
   <div class="px-4 sm:px-6 lg:px-8 grid gap-8 grid-cols-4">
     <app-statistics [statistics]="statistics" class="col-span-full" />
-    <app-live-map [animals]="animals" class="col-span-2" />
+    <app-live-map [animals]="animals" class="col-span-3" />
+    <app-alerts-card [alerts]="alerts" class="col-span-1 h-full" />
 
     <router-outlet />
   </div>
