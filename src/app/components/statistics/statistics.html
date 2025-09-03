@@ -1,0 +1,41 @@
+<dl
+  class="mt-5 grid grid-cols-1 divide-gray-200 overflow-hidden rounded-lg bg-white shadow-sm md:grid-cols-4 md:divide-x md:divide-y-0"
+>
+  @for (stat of statistics; track stat.description) {
+  <div class="px-4 py-5 sm:p-6">
+    <dt class="text-base font-normal text-gray-900">{{ stat.description }}</dt>
+    <dd class="mt-1 flex items-baseline justify-between md:block lg:flex">
+      <div class="flex items-baseline text-2xl font-semibold text-indigo-600">
+        @if (stat.units === '€') { {{ stat.units }} {{ stat.value }} } @else {
+        {{ stat.value }} {{ stat.units }} }
+      </div>
+
+      @if (stat.change){
+      <div
+        [ngClass]="{
+              'bg-green-100 text-green-800': stat.change > 0,
+              'bg-red-100 text-red-800': stat.change < 0
+            }"
+        class="inline-flex items-baseline rounded-full px-2.5 py-0.5 text-sm font-medium md:mt-2 lg:mt-0"
+      >
+        @if (stat.change > 0) {
+        <fa-icon
+          [icon]="faArrowUp"
+          class="mr-0.5 -ml-1 self-center text-green-500"
+        />
+        } @else {
+        <fa-icon
+          [icon]="faArrowDown"
+          class="mr-0.5 -ml-1 self-center text-red-500"
+        />
+        }
+        <span class="sr-only">
+          {{ stat.change > 0 ? 'Increased' : 'Decreased' }} by
+        </span>
+        {{ Math.abs(stat.change) }} %
+      </div>
+      }
+    </dd>
+  </div>
+  }
+</dl>
