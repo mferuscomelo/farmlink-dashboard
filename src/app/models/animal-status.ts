@@ -6,5 +6,8 @@ export interface AnimalStatus {
   location: Location;
   health: 'good' | 'warning' | 'critical';
   batteryLevel: number; // percentage
+  activity: 'grazing' | 'moving' | 'resting';
+  distance: number; // kilometers
+  temperature: number; // Celsius
   lastUpdated: Date;
 }

@@ -77,6 +77,24 @@
             scope="col"
             class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
           >
+            Distance
+          </th>
+          <th
+            scope="col"
+            class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+          >
+            Temperature
+          </th>
+          <th
+            scope="col"
+            class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+          >
+            Activity
+          </th>
+          <th
+            scope="col"
+            class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+          >
             Battery Level
           </th>
           <th
@@ -107,6 +125,15 @@
             >
               {{animal.health}}
             </span>
+          </td>
+          <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">
+            {{animal.distance }} km
+          </td>
+          <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">
+            {{animal.temperature }} °C
+          </td>
+          <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">
+            {{animal.activity}}
           </td>
           <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">
             <div class="overflow-hidden rounded-full bg-gray-200">
