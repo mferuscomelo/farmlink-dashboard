@@ -6,10 +6,11 @@ import { LiveMap } from './components/live-map/live-map';
 import { AnimalStatus } from './models/animal-status';
 import { AlertsCard } from './components/alerts-card/alerts-card';
 import { Alert } from './models/alert';
+import { StatusTable } from './components/status-table/status-table';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Statistics, LiveMap, AlertsCard],
+  imports: [RouterOutlet, Statistics, LiveMap, AlertsCard, StatusTable],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
