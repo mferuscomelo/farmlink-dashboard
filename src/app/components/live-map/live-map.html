@@ -1,0 +1,49 @@
+<div class="overflow-hidden rounded-lg bg-white shadow-sm">
+  <div class="px-4 py-5 sm:px-6 flex justify-between items-center gap-2">
+    <div class="mr-auto">
+      <h3 class="text-xl font-semibold text-gray-900">Live Herd Location</h3>
+      <p class="mt-1 text-gray-500">Pasture Field A - North Section</p>
+    </div>
+    <button
+      type="button"
+      class="rounded-md bg-white p-2.5 text-sm font-semibold text-gray-900 shadow-xs inset-ring inset-ring-gray-300 hover:bg-gray-50"
+    >
+      <fa-icon [icon]="faExpand" class="text-xl" />
+    </button>
+  </div>
+  <div class="px-6">
+    <!-- Content goes here -->
+    <div id="map" class="h-96 rounded-md"></div>
+  </div>
+  <div class="px-4 py-4 sm:px-6 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-4">
+      <span class="inline-flex items-center gap-x-1.5 px-2 py-1 text-green-700">
+        <svg viewBox="0 0 6 6" aria-hidden="true" class="size-3 fill-green-500">
+          <circle r="3" cx="3" cy="3" />
+        </svg>
+        Healthy ({{ healthyCount }})
+      </span>
+
+      <span
+        class="inline-flex items-center gap-x-1.5 px-2 py-1 text-yellow-700"
+      >
+        <svg
+          viewBox="0 0 6 6"
+          aria-hidden="true"
+          class="size-3 fill-yellow-500"
+        >
+          <circle r="3" cx="3" cy="3" />
+        </svg>
+        Warning ({{ warningCount }})
+      </span>
+
+      <span class="inline-flex items-center gap-x-1.5 px-2 py-1 text-red-700">
+        <svg viewBox="0 0 6 6" aria-hidden="true" class="size-3 fill-red-500">
+          <circle r="3" cx="3" cy="3" />
+        </svg>
+        Alert ({{ criticalCount }})
+      </span>
+    </div>
+    <span class="text-sm text-gray-500"> Last Updated: 30 seconds ago </span>
+  </div>
+</div>
