@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { AnimalStatus } from '../../models/animal-status';
 import { faSlidersSimple } from '@fortawesome/pro-regular-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { DatePipe } from '@angular/common';
+import { RelativeTimePipe } from '../../pipes/relative-time-pipe';
 
 @Component({
   selector: 'app-status-table',
-  imports: [FontAwesomeModule, DatePipe],
+  imports: [FontAwesomeModule, RelativeTimePipe],
   templateUrl: './status-table.html',
   styleUrl: './status-table.css',
 })
