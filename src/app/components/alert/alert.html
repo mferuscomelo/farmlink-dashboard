@@ -1,19 +1,22 @@
 <div
-  class="overflow-hidden rounded-lg bg-white shadow-sm my-4 w-full max-w-lg p-4 flex flex-col gap-y-2"
+  class="overflow-hidden rounded-lg bg-white my-4 w-full max-w-lg p-4 flex flex-col gap-y-2 border border-gray-200"
+  [class]="`alert-${type()}`"
 >
   <div class="flex items-start">
-    <fa-icon [icon]="alertIcon()" class="text-{{ iconColor() }}-500"></fa-icon>
+    <fa-icon [icon]="alertIcon()"></fa-icon>
 
-    <div class="ml-4">
-      <h4 class="font-semibold">{{ title() }}</h4>
+    <div class="ml-4 w-full">
+      <div class="flex items-center justify-between">
+        <h4 class="font-semibold">{{ title() }}</h4>
+
+        <span
+          class="badge flex items-center justify-center rounded-md px-2 py-1 text-xs font-medium self-start w-16 inset-ring capitalize"
+        >
+          {{type()}}
+        </span>
+      </div>
 
       <p class="text-sm text-gray-500 mt-1">{{ message() }}</p>
-
-      <span
-        class="flex items-center rounded-md px-2 py-1 text-xs font-medium self-start text-{{ badgeColor() }}-500 bg-{{ badgeColor() }}-100 w-fit"
-      >
-        {{type()}}
-      </span>
     </div>
   </div>
 

@@ -1,5 +1,8 @@
 import { Component, computed, input } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {
+  FontAwesomeModule,
+  IconDefinition,
+} from '@fortawesome/angular-fontawesome';
 import {
   faClock,
   faCheckCircle,
@@ -23,33 +26,12 @@ export class Alert {
 
   faClock = faClock;
 
-  alertIcon = computed(() => {
-    const icons = {
-      success: faCheckCircle,
-      info: faInfoCircle,
-      warning: faExclamationTriangle,
-      error: faTimesCircle,
-    };
-    return icons[this.type()];
-  });
+  icons = {
+    success: faCheckCircle,
+    info: faInfoCircle,
+    warning: faExclamationTriangle,
+    error: faTimesCircle,
+  } as const;
 
-  iconColor = computed(() => {
-    const typeClasses = {
-      success: 'green',
-      info: 'blue',
-      warning: 'yellow',
-      error: 'red',
-    };
-    return typeClasses[this.type()];
-  });
-
-  badgeColor = computed(() => {
-    const typeClasses = {
-      success: 'green',
-      info: 'blue',
-      warning: 'yellow',
-      error: 'red',
-    };
-    return typeClasses[this.type()];
-  });
+  alertIcon = computed<IconDefinition>(() => this.icons[this.type()]);
 }

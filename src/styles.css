@@ -1,1 +1,40 @@
 @import "tailwindcss";
+
+@layer components {
+  .alert-success {
+    fa-icon {
+      @apply text-green-500;
+    }
+
+    .badge {
+      @apply bg-green-100 inset-ring-green-700/10 text-green-500;
+    }
+  }
+  .alert-info {
+    fa-icon {
+      @apply text-blue-500;
+    }
+
+    .badge {
+      @apply bg-blue-100 inset-ring-blue-700/10 text-blue-500;
+    }
+  }
+  .alert-warning {
+    fa-icon {
+      @apply text-yellow-500;
+    }
+
+    .badge {
+      @apply bg-yellow-100 inset-ring-yellow-700/10 text-yellow-500;
+    }
+  }
+  .alert-error {
+    fa-icon {
+      @apply text-red-500;
+    }
+
+    .badge {
+      @apply bg-red-100 inset-ring-red-700/10 text-red-500;
+    }
+  }
+}
