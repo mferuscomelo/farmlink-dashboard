@@ -40,17 +40,23 @@ export class LiveMap {
       zoom: 17,
     });
 
-    const tiles = L.tileLayer(
-      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      {
-        maxZoom: 18,
-        minZoom: 3,
-        attribution:
-          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      }
-    );
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      minZoom: 3,
+      attribution:
+        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(this.map);
 
-    tiles.addTo(this.map);
+    L.polygon([
+      [46.522, 9.804],
+      [46.522, 9.8085],
+      [46.521, 9.809],
+      [46.5175, 9.8085],
+      [46.517, 9.807],
+      [46.5175, 9.804],
+      [46.519, 9.8035],
+      [46.5205, 9.8038],
+    ]).addTo(this.map);
   }
 
   private placeMarkers(): void {
