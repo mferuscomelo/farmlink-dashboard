@@ -43,7 +43,7 @@ export class App {
     {
       id: '1',
       name: 'Bessie',
-      location: { latitude: 37.7749, longitude: -122.4194 },
+      location: { latitude: 46.5197, longitude: 9.8062 },
       health: 'good',
       batteryLevel: 85,
       lastUpdated: new Date(Date.now() - Math.random() * 2 * 60 * 1000),
@@ -54,7 +54,7 @@ export class App {
     {
       id: '2',
       name: 'MooMoo',
-      location: { latitude: 34.0522, longitude: -118.2437 },
+      location: { latitude: 46.5203, longitude: 9.8058 },
       health: 'warning',
       batteryLevel: 45,
       lastUpdated: new Date(Date.now() - Math.random() * 2 * 60 * 1000),
@@ -65,7 +65,7 @@ export class App {
     {
       id: '3',
       name: 'Daisy',
-      location: { latitude: 40.7128, longitude: -74.006 },
+      location: { latitude: 46.5185, longitude: 9.8075 },
       health: 'critical',
       batteryLevel: 15,
       lastUpdated: new Date(Date.now() - Math.random() * 2 * 60 * 1000),
@@ -76,7 +76,7 @@ export class App {
     {
       id: '4',
       name: 'Bella',
-      location: { latitude: 41.8781, longitude: -87.6298 },
+      location: { latitude: 46.5211, longitude: 9.8043 },
       health: 'good',
       batteryLevel: 92,
       lastUpdated: new Date(Date.now() - Math.random() * 2 * 60 * 1000),
@@ -87,7 +87,7 @@ export class App {
     {
       id: '5',
       name: 'Luna',
-      location: { latitude: 29.7604, longitude: -95.3698 },
+      location: { latitude: 46.5189, longitude: 9.8081 },
       health: 'good',
       batteryLevel: 68,
       lastUpdated: new Date(Date.now() - Math.random() * 2 * 60 * 1000),
@@ -98,7 +98,7 @@ export class App {
     {
       id: '6',
       name: 'Rosie',
-      location: { latitude: 33.4484, longitude: -112.074 },
+      location: { latitude: 46.5178, longitude: 9.8054 },
       health: 'warning',
       batteryLevel: 23,
       lastUpdated: new Date(Date.now() - Math.random() * 2 * 60 * 1000),
@@ -109,7 +109,7 @@ export class App {
     {
       id: '7',
       name: 'Clover',
-      location: { latitude: 39.7392, longitude: -104.9903 },
+      location: { latitude: 46.5206, longitude: 9.8069 },
       health: 'good',
       batteryLevel: 78,
       lastUpdated: new Date(Date.now() - Math.random() * 2 * 60 * 1000),
@@ -120,7 +120,7 @@ export class App {
     {
       id: '8',
       name: 'Maple',
-      location: { latitude: 47.6062, longitude: -122.3321 },
+      location: { latitude: 46.5194, longitude: 9.8047 },
       health: 'critical',
       batteryLevel: 8,
       lastUpdated: new Date(Date.now() - Math.random() * 2 * 60 * 1000),
@@ -131,7 +131,7 @@ export class App {
     {
       id: '9',
       name: 'Buttercup',
-      location: { latitude: 25.7617, longitude: -80.1918 },
+      location: { latitude: 46.5201, longitude: 9.8064 },
       health: 'good',
       batteryLevel: 91,
       lastUpdated: new Date(Date.now() - Math.random() * 2 * 60 * 1000),
@@ -142,7 +142,7 @@ export class App {
     {
       id: '10',
       name: 'Patches',
-      location: { latitude: 42.3601, longitude: -71.0589 },
+      location: { latitude: 46.5182, longitude: 9.8071 },
       health: 'warning',
       batteryLevel: 34,
       lastUpdated: new Date(Date.now() - Math.random() * 2 * 60 * 1000),
