@@ -36,8 +36,8 @@ export class LiveMap {
 
   private initMap(): void {
     this.map = L.map('map', {
-      center: [37.7749, -122.4194],
-      zoom: 5,
+      center: [46.5197, 9.8062],
+      zoom: 17,
     });
 
     const tiles = L.tileLayer(
