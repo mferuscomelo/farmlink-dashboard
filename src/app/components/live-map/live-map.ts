@@ -61,10 +61,19 @@ export class LiveMap {
 
   private placeMarkers(): void {
     this.animals.forEach((animal) => {
-      const marker = L.marker([
-        animal.location.latitude,
-        animal.location.longitude,
-      ]);
+      const color = this.getHealthColor(animal.health);
+
+      const marker = L.circleMarker(
+        [animal.location.latitude, animal.location.longitude],
+        {
+          radius: 8,
+          fillColor: color,
+          color: '#fff',
+          weight: 2,
+          opacity: 1,
+          fillOpacity: 0.8,
+        }
+      );
       marker.addTo(this.map).bindPopup(`
         <b>${animal.name}</b><br>
         Health: ${animal.health}<br>
@@ -72,5 +81,18 @@ export class LiveMap {
         Last Updated: ${animal.lastUpdated.toLocaleString()}
       `);
     });
+  }
+
+  private getHealthColor(health: string): string {
+    switch (health) {
+      case 'good':
+        return '#22c55e';
+      case 'warning':
+        return '#f59e0b';
+      case 'critical':
+        return '#ef4444';
+      default:
+        return '#6b7280';
+    }
   }
 }
