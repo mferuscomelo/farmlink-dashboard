@@ -1,10 +1,9 @@
-<main class="py-10">
-  <div class="px-4 sm:px-6 lg:px-8 grid gap-8 grid-cols-4">
-    <app-statistics [statistics]="statistics" class="col-span-full" />
-    <app-live-map [animals]="animals" class="col-span-3" />
-    <app-alerts-card [alerts]="alerts" class="col-span-1 h-full" />
-    <app-status-table [animals]="animals" class="col-span-full" />
+<app-sidebar />
 
+<div class="lg:pl-72">
+  <app-topbar />
+
+  <main class="py-10">
     <router-outlet />
-  </div>
-</main>
+  </main>
+</div>
